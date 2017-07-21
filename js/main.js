@@ -32,7 +32,6 @@ ToDo.controller('mainController' ,function($scope){
     }
     
     $scope.deleteaToDo = function(title , details){
-        console.log('chal ra h ');
         $scope.ListOfToDo.splice($scope.ListOfToDo.indexOf({title , details}) , 1);
     }
 });

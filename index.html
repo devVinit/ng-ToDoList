@@ -5,6 +5,7 @@
     <title>Document</title>
     <script src="js/angular.min.js"></script>
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body{
             font-family: sans-serif;
@@ -20,6 +21,11 @@
         
         .to-do-box p{
             margin: 20px;
+            margin-bottom: 0px;
+        }
+        
+        .trash{
+            margin: 20px;
         }
     </style>
 </head>
@@ -31,7 +37,7 @@
         <div ng-repeat="list in ListOfToDo" class="to-do-box">
             <h2>{{list.title}}</h2>
             <p>{{list.details}}</p>
-            <button ng-click="deleteaToDo(user.title , user.details);">delete</button>
+            <i class="fa fa-trash-o trash" ng-click="deleteaToDo(user.title , user.details);"></i>
         </div>
     </div>
 </body>
