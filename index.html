@@ -7,6 +7,10 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    
+    <div ng-controller="mainController">
+        <div ng-repeat="list in ListOfToDo">
+            {{list.title}}
+        </div>
+    </div>
 </body>
 </html>
