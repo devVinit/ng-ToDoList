@@ -31,6 +31,7 @@
         <div ng-repeat="list in ListOfToDo" class="to-do-box">
             <h2>{{list.title}}</h2>
             <p>{{list.details}}</p>
+            <button ng-click="deleteaToDo(user.title , user.details);">delete</button>
         </div>
     </div>
 </body>

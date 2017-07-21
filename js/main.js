@@ -28,7 +28,11 @@ ToDo.controller('mainController' ,function($scope){
     ];
     
     $scope.addaToDo = function(toDoTitle , toDoDetail){
-        console.log('chal raha h ');
         $scope.ListOfToDo.push({ title :toDoTitle , details : toDoDetail});
+    }
+    
+    $scope.deleteaToDo = function(title , details){
+        console.log('chal ra h ');
+        $scope.ListOfToDo.splice($scope.ListOfToDo.indexOf({title , details}) , 1);
     }
 });
