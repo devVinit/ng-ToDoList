@@ -17,24 +17,28 @@
         
         .to-do-box h2{
             margin: 20px;
+            margin-bottom: 0px;
         }
         
         .to-do-box p{
             margin: 20px;
             margin-bottom: 0px;
+            display: inline-block;
         }
         
         .trash{
             margin: 20px;
+            font-size: 30px;
         }
     </style>
 </head>
 <body>
     <div ng-controller="mainController">
+       <input type="text" ng-model="query">
        <input type="text" ng-model="user.title" class="enter-to-add-todo-titile" placeholder="Enter the title of a ToDo">
        <input type="text" ng-model="user.details" class="enter-to-add-todo-detail" placeholder="Enter the details of a ToDO">
        <button ng-click="addaToDo(user.title , user.details);">Add</button>
-        <div ng-repeat="list in ListOfToDo" class="to-do-box">
+        <div ng-repeat="list in ListOfToDo | filter: query" class="to-do-box">
             <h2>{{list.title}}</h2>
             <p>{{list.details}}</p>
             <i class="fa fa-trash-o trash" ng-click="deleteaToDo(user.title , user.details);"></i>
