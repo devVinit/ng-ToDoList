@@ -5,11 +5,29 @@
     <title>Document</title>
     <script src="js/angular.min.js"></script>
     <script src="js/main.js"></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .to-do-box{
+            margin: 40px;
+            border: 2px solid black;
+        }
+        
+        .to-do-box h2{
+            margin: 20px;
+        }
+        
+        .to-do-box p{
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
     <div ng-controller="mainController">
-        <div ng-repeat="list in ListOfToDo">
-            {{list.title}}
+        <div ng-repeat="list in ListOfToDo" class="to-do-box">
+            <h2>{{list.title}}</h2>
+            <p>{{list.details}}</p>
         </div>
     </div>
 </body>
