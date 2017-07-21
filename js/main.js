@@ -27,4 +27,8 @@ ToDo.controller('mainController' ,function($scope){
         }
     ];
     
+    $scope.addaToDo = function(toDoTitle , toDoDetail){
+        console.log('chal raha h ');
+        $scope.ListOfToDo.push({ title :toDoTitle , details : toDoDetail});
+    }
 });
